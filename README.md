@@ -1,7 +1,7 @@
 # Inventory Management System
 Inventory Management System dibuat untuk mempermudah pemilik industri untuk mengelola stok barang. Proyek ini dibuat untuk tugas proyek mata kuliah SDA oleh team 5. Untuk sekarang, proyek ini masih berproses.
 
-Template website dari: 
+Template website dari: https://github.com/themeselection/materio-mui-react-nextjs-admin-template-free
 
 ## Cara Menjalankan
 
@@ -44,10 +44,10 @@ Template website dari:
 - Lalu centang Enable untuk Email/Password, dan klik tombol Save
 
 #### Jalankan webnya
-Di VSCode, buka terminal, lalu copy kode berikut: 
+- Di VSCode, buka terminal, lalu copy kode berikut: 
 `npm install --legacy-peer-deps` lalu klik enter, tunggu sampai prosesnya selesai
-Lalu, setelah selesai, copy kode berikut: `npm install firebase` ke terminal lalu klik enter, dan tunggu sampai selesai
-Setelah selesai, copy kode berikut:  `npm run dev` ke terminal lalu klik enter
-Akses websitenya di: http://localhost:3000/
-Untuk buat akun baru di website pergi ke http://localhost:3000/register 
-Note: kalau ada error ‘authId’, restart server (diperlukan restart server untuk memberikan efek perubahan setelah file next.config.js diedit)
+- Lalu, setelah selesai, copy kode berikut: `npm install firebase` ke terminal lalu klik enter, dan tunggu sampai selesai
+- Setelah selesai, copy kode berikut:  `npm run dev` ke terminal lalu klik enter
+- Akses websitenya di: http://localhost:3000/
+- Pergi ke http://localhost:3000/register untuk membuat akun baru
+- Note: kalau ada error ‘authId’, restart server (diperlukan restart server untuk memberikan efek perubahan setelah file next.config.js diedit)
