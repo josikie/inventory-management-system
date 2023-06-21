@@ -51,3 +51,6 @@ Template website dari: https://github.com/themeselection/materio-mui-react-nextj
 - Akses websitenya di: http://localhost:3000/
 - Pergi ke http://localhost:3000/register untuk membuat akun baru
 - Note: kalau ada error ‘authId’, restart server (diperlukan restart server untuk memberikan efek perubahan setelah file next.config.js diedit)
+
+#### Berhasil Menjalankan
+![berhasil](https://github.com/josikie/inventory-management-system/assets/54074780/bba451a6-639e-4f39-8aff-ce23ad6770f9)
