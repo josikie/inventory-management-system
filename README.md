@@ -49,7 +49,7 @@ Template website dari: https://github.com/themeselection/materio-mui-react-nextj
 - Lalu, setelah selesai, copy kode berikut: `npm install firebase` ke terminal lalu klik enter, dan tunggu sampai selesai
 - Setelah selesai, copy kode berikut:  `npm run dev` ke terminal lalu klik enter
 - Akses websitenya di: http://localhost:3000/
-- Pergi ke http://localhost:3000/register untuk membuat akun baru
+- Pergi ke http://localhost:3000/pages/register untuk membuat akun baru, sebenarnya di http://localhost:3000/ bakalan auto redirect ke http://localhost:3000/pages/register
 - Note: kalau ada error ‘authId’, restart server (diperlukan restart server untuk memberikan efek perubahan setelah file next.config.js diedit)
 
 #### Berhasil Menjalankan
