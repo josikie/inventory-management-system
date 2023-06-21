@@ -54,3 +54,11 @@ Template website dari: https://github.com/themeselection/materio-mui-react-nextj
 
 #### Berhasil Menjalankan
 ![berhasil](https://github.com/josikie/inventory-management-system/assets/54074780/bba451a6-639e-4f39-8aff-ce23ad6770f9)
+
+### Resource (Buat Belajar)
+1. Nambahkan CSS ke element: https://mui.com/material-ui/react-box/#the-sx-prop
+2. Nambahkan Element: https://mui.com/material-ui/
+3. Belajar Next JS langsung dari dokumentasi: https://nextjs.org/docs
+4. Belajar dasar dasar Next JS (video, bahasa Indo): https://www.youtube.com/watch?v=jbqzDR0JfNw
+5. Belajar dasar dasar Next JS (video, bahasa inggris): https://www.youtube.com/watch?v=tsmaQdgidKg
+6. Belajar Autentikasi Next JS: https://www.freecodecamp.org/news/create-full-stack-app-with-nextjs13-and-firebase/
