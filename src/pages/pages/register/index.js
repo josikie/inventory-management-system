@@ -59,7 +59,7 @@ const RegisterPage = () => {
   // ** States
   const router = useRouter()
   const [values, setValues] = useState({
-    email:'',
+    email: '',
     password: '',
     showPassword: false
   })
@@ -85,7 +85,7 @@ const RegisterPage = () => {
   // const signUp = () => {
   //   createUserWithEmailAndPassword(auth, values.email, values.password)
   //   .then((userCredential) => {
-  //     // Signed in 
+  //     // Signed in
   //     const user = userCredential.user;
   //     console.log(user)
   //     sessionStorage.setItem('Token',userCredential.user.accessToken)
@@ -96,19 +96,19 @@ const RegisterPage = () => {
   //     setErrorMessage(errorMessage.split(":")[1])
   //   })
   // }
-  
-  const handleForm = async (event) => {
+
+  const handleForm = async event => {
     event.preventDefault()
-    const {result, error} = await signUp(values.email, values.password)
-    if(error){
+    const { result, error } = await signUp(values.email, values.password)
+    if (error) {
       const errorMessage = error.message
-      setErrorMessage(errorMessage.split(":")[1])
+      setErrorMessage(errorMessage.split(':')[1])
       return console.log(error)
     }
 
     //success sign up
     console.log(result)
-    return router.push("/")
+    return router.push('/')
   }
 
   return (
@@ -195,8 +195,15 @@ const RegisterPage = () => {
             <Typography variant='body2'>Manage Supply Everywhere! Sign Up now!</Typography>
           </Box>
           <form noValidate autoComplete='off' onSubmit={handleForm}>
-            <TextField fullWidth type='email' label='Email' onChange={handleChange('email')} name='email' sx={{ marginBottom: 4 }} />
-            <FormControl fullWidth sx={{ marginBottom: 10}}>
+            <TextField
+              fullWidth
+              type='email'
+              label='Email'
+              onChange={handleChange('email')}
+              name='email'
+              sx={{ marginBottom: 4 }}
+            />
+            <FormControl fullWidth sx={{ marginBottom: 10 }}>
               <InputLabel htmlFor='auth-register-password'>Password</InputLabel>
               <OutlinedInput
                 label='Password'
@@ -218,8 +225,10 @@ const RegisterPage = () => {
                 }
               />
             </FormControl>
-            <Typography variant='subtitle1' sx={{ color: red[500] }}>{errorMessage}</Typography>
-            <Button fullWidth size='large' type='submit' variant='contained' sx={{ marginBottom: 7 }} >
+            <Typography variant='subtitle1' sx={{ color: red[500] }}>
+              {errorMessage}
+            </Typography>
+            <Button fullWidth size='large' type='submit' variant='contained' sx={{ marginBottom: 7 }}>
               Sign up
             </Button>
             <Box sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'center' }}>

@@ -4,12 +4,12 @@ module.exports = {
   trailingSlash: true,
   reactStrictMode: false,
   env: {
-    apiKey: "apikey",
-    authDomain: "authDomain",
-    projectId: "projectId",
-    storageBucket: "storageBucket",
-    messagingSenderId: "messagingSenderId",
-    appId: "appId"
+    apiKey: 'apikey',
+    authDomain: 'authDomain',
+    projectId: 'projectId',
+    storageBucket: 'storageBucket',
+    messagingSenderId: 'messagingSenderId',
+    appId: 'appId'
   },
   experimental: {
     esmExternals: false,

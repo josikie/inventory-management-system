@@ -22,3 +22,17 @@ code:not([class*='language-']):after {
 code[class*='language-'] {
   padding: 0;
 }
+
+.modalContainer {
+  background-color: #fff;
+  padding: 2rem;
+  width: 500px;
+  max-height: 500px;
+  border-radius: 5px;
+}
+
+.modalWrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+}
