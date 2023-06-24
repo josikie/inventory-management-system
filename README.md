@@ -44,6 +44,20 @@ Template website dari: https://github.com/themeselection/materio-mui-react-nextj
 - Klik tombol Get started,
 - Pilih Email/Password di Native Providers
 - Lalu centang Enable untuk Email/Password, dan klik tombol Save
+- Klik card Firestore Database
+- Klik tombol Get started
+- Lalu pada Firestore Database pergi ke Tab Rules dan edit rules seperti dibawah ini
+  ```
+  rules_version = '2';
+
+  service cloud.firestore {
+    match /databases/{database}/documents {
+      match /{document=**} {
+        allow read, write;
+      }
+    }
+  }
+  ```
 
 #### Jalankan webnya
 
