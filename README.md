@@ -7,9 +7,8 @@ Template website dari: https://github.com/themeselection/materio-mui-react-nextj
 ## Cara Menjalankan
 
 #### Clone Kode
-
-- Buat folder baru di document, terserah namanya apa, boleh juga dibuat didirektori selain document.
-- Klik kanan, lalu klik dua kali git bash atau kalau ada terminal, terus copy kode ini ke terminal `git clone`, tunggu sebentar itu lagi mendownload seluruh kode dari github,
+- Buat folder baru di document, terserah namanya apa, boleh juga dibuat didirektori selain document. 
+- Klik kanan, lalu klik dua kali git bash atau kalau ada terminal, terus copy kode ini ke terminal `git clone https://github.com/josikie/inventory-management-system.git`, tunggu sebentar itu lagi mendownload seluruh kode dari github,
 - Setelah selesai, buka folder yang sudah didownload dari github melalui VS Code.
 
 #### Menyiapkan Proyek Firebase
