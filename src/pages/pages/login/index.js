@@ -80,21 +80,20 @@ const LoginPage = () => {
   //     setErrorMessage(errorMessage.split(":")[1]);
   //   });
   // }
-  const handleForm = async (event) => {
+  const handleForm = async event => {
     event.preventDefault()
-    const {result, error} = await signIn(values.email, values.password)
+    const { result, error } = await signIn(values.email, values.password)
 
-    if(error){
-      const errorMessage = error.message;
-      setErrorMessage(errorMessage.split(":")[1])
+    if (error) {
+      const errorMessage = error.message
+      setErrorMessage(errorMessage.split(':')[1])
       return console.log(error)
     }
 
     //success sign in
     console.log(result)
-    return router.push("/")
+    return router.push('/')
   }
-
 
   // ** Hook
   const theme = useTheme()
@@ -196,7 +195,14 @@ const LoginPage = () => {
             <Typography variant='body2'>Please sign-in to access</Typography>
           </Box>
           <form noValidate autoComplete='off' onSubmit={handleForm}>
-            <TextField autoFocus fullWidth id='email' label='Email' onChange={handleChange('email')} sx={{ marginBottom: 4 }} />
+            <TextField
+              autoFocus
+              fullWidth
+              id='email'
+              label='Email'
+              onChange={handleChange('email')}
+              sx={{ marginBottom: 4 }}
+            />
             <FormControl fullWidth sx={{ marginBottom: 4 }}>
               <InputLabel htmlFor='auth-login-password'>Password</InputLabel>
               <OutlinedInput
@@ -227,14 +233,10 @@ const LoginPage = () => {
                 <LinkStyled onClick={e => e.preventDefault()}>Forgot Password?</LinkStyled>
               </Link>
             </Box> */}
-            <Typography variant='subtitle1' sx={{ color: red[500] }}>{errorMessage}</Typography>
-            <Button
-              fullWidth
-              size='large'
-              variant='contained'
-              type='submit'
-              sx={{ marginBottom: 7 }}
-            >
+            <Typography variant='subtitle1' sx={{ color: red[500] }}>
+              {errorMessage}
+            </Typography>
+            <Button fullWidth size='large' variant='contained' type='submit' sx={{ marginBottom: 7 }}>
               Login
             </Button>
             <Box sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'center' }}>
