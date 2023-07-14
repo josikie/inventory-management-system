@@ -57,7 +57,9 @@ const FormControlLabel = styled(MuiFormControlLabel)(({ theme }) => ({
 
 const RegisterPage = () => {
   // ** States
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const router = useRouter()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const [values, setValues] = useState({
     email: '',
     password: '',
@@ -101,16 +103,22 @@ const RegisterPage = () => {
     event.preventDefault()
     const { result, error } = await signUp(values.email, values.password)
     if (error) {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       const errorMessage = error.message
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       setErrorMessage(errorMessage.split(':')[1])
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       return console.log(error)
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     //success sign up
     console.log(result)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     return router.push('/')
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   return (
     <Box className='content-center'>
       <Card sx={{ zIndex: 1 }}>

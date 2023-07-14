@@ -77,6 +77,7 @@ const Dashboard = () => {
         is_enable: true
       })
       // const updateRef = doc(db, "cities", "DC");
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       await updateDoc(docRef, {
         id: docRef.id
       })
@@ -91,6 +92,7 @@ const Dashboard = () => {
 
   React.useEffect(() => {
     if (user == null) router.push('/pages/register')
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user])
 
   return (
