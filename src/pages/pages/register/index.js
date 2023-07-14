@@ -54,8 +54,9 @@ const FormControlLabel = styled(MuiFormControlLabel)(({ theme }) => ({
     color: theme.palette.text.secondary
   }
 }))
-
+// eslint-disable-next-line react-hooks/exhaustive-deps
 const RegisterPage = () => {
+
   // ** States
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const router = useRouter()
@@ -65,9 +66,10 @@ const RegisterPage = () => {
     password: '',
     showPassword: false
   })
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const [errorMessage, setErrorMessage] = useState('')
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   // ** Hook
   const theme = useTheme()
 
@@ -99,9 +101,13 @@ const RegisterPage = () => {
   //   })
   // }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const handleForm = async event => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     event.preventDefault()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const { result, error } = await signUp(values.email, values.password)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     if (error) {
       // eslint-disable-next-line react-hooks/exhaustive-deps
       const errorMessage = error.message
@@ -112,7 +118,7 @@ const RegisterPage = () => {
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    //success sign up
+
     console.log(result)
     // eslint-disable-next-line react-hooks/exhaustive-deps
     return router.push('/')
