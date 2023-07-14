@@ -4,12 +4,12 @@ module.exports = {
   trailingSlash: true,
   reactStrictMode: false,
   env: {
-    apiKey: 'apikey',
-    authDomain: 'authDomain',
-    projectId: 'projectId',
-    storageBucket: 'storageBucket',
-    messagingSenderId: 'messagingSenderId',
-    appId: 'appId'
+    apiKey: "AIzaSyCloj41veMk6Umx8QkxihzofFzu0-gFjig",
+    authDomain: "inventory-management-sys-dc576.firebaseapp.com",
+    projectId: "inventory-management-sys-dc576",
+    storageBucket: "inventory-management-sys-dc576.appspot.com",
+    messagingSenderId: "222111447867",
+    appId: "1:222111447867:web:13dfe4db4d8d1fc813951e"
   },
   experimental: {
     esmExternals: false,
