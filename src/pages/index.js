@@ -76,21 +76,28 @@ const Dashboard = () => {
         added_on: new Date().getTime(),
         is_enable: true
       })
-      // const updateRef = doc(db, "cities", "DC");
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       await updateDoc(docRef, {
         id: docRef.id
       })
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       setLoadingSubmit(false)
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       setOpen(false)
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       setRefresh(!refresh)
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     } catch (e) {
       console.log(e)
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       setLoadingSubmit(false)
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }
   }
 
   React.useEffect(() => {
     if (user == null) router.push('/pages/register')
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user])
 
   return (

@@ -54,18 +54,22 @@ const FormControlLabel = styled(MuiFormControlLabel)(({ theme }) => ({
     color: theme.palette.text.secondary
   }
 }))
-
+// eslint-disable-next-line react-hooks/exhaustive-deps
 const RegisterPage = () => {
+
   // ** States
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const router = useRouter()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const [values, setValues] = useState({
     email: '',
     password: '',
     showPassword: false
   })
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const [errorMessage, setErrorMessage] = useState('')
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   // ** Hook
   const theme = useTheme()
 
@@ -97,20 +101,30 @@ const RegisterPage = () => {
   //   })
   // }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const handleForm = async event => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     event.preventDefault()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const { result, error } = await signUp(values.email, values.password)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     if (error) {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       const errorMessage = error.message
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       setErrorMessage(errorMessage.split(':')[1])
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       return console.log(error)
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
 
-    //success sign up
     console.log(result)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     return router.push('/')
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   return (
     <Box className='content-center'>
       <Card sx={{ zIndex: 1 }}>

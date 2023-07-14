@@ -28,8 +28,12 @@ module.exports = {
     // 'lines-around-comment': [
     //   'error',
     //   {
+
     //     beforeLineComment: true,
     //     beforeBlockComment: true,
+    //     beforeLineComment: false,
+    //     beforeBlockComment: false,
+
     //     allowBlockStart: true,
     //     allowClassStart: true,
     //     allowObjectStart: true,
@@ -41,6 +45,11 @@ module.exports = {
     // 'newline-before-return': 'error',
 
     // add new line below import
+    // // add new line above return
+    // 'newline-before-return': 'error',
+
+    // // add new line below import
+
     // 'import/newline-after-import': [
     //   'error',
     //   {
@@ -49,6 +58,8 @@ module.exports = {
     // ],
 
     // add new line after each var, const, let declaration
+    // // add new line after each var, const, let declaration
+
     // 'padding-line-between-statements': [
     //   'error',
     //   { blankLine: 'always', prev: ['export'], next: ['*'] },
