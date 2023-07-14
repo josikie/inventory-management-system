@@ -18,13 +18,6 @@ import ApexChartWrapper from 'src/@core/styles/libs/react-apexcharts'
 
 // ** Demo Components Imports
 import TableBasic from 'src/views/tables/TableBasic'
-import Table from 'src/views/dashboard/Table'
-import Trophy from 'src/views/dashboard/Trophy'
-import TotalEarning from 'src/views/dashboard/TotalEarning'
-import StatisticsCard from 'src/views/dashboard/StatisticsCard'
-import WeeklyOverview from 'src/views/dashboard/WeeklyOverview'
-import DepositWithdraw from 'src/views/dashboard/DepositWithdraw'
-import SalesByCountries from 'src/views/dashboard/SalesByCountries'
 import TableInventory from 'src/views/tables/TableInventory'
 
 import { purple } from '@mui/material/colors'
@@ -33,7 +26,6 @@ import React from 'react'
 import { useAuthContext } from 'src/context/authContext'
 import { useRouter } from 'next/router'
 import { Button, FormControl, InputLabel, MenuItem, Modal, Select, TextField } from '@mui/material'
-import { Box } from 'mdi-material-ui'
 import { LoadingButton } from '@mui/lab'
 import { addDoc, collection, getFirestore, updateDoc } from 'firebase/firestore'
 import firebase_app from 'src/configs/firebase.config'
@@ -76,28 +68,28 @@ const Dashboard = () => {
         added_on: new Date().getTime(),
         is_enable: true
       })
-      // eslint-disable-next-line react-hooks/exhaustive-deps
+
       await updateDoc(docRef, {
         id: docRef.id
       })
-      // eslint-disable-next-line react-hooks/exhaustive-deps
+      
       setLoadingSubmit(false)
-      // eslint-disable-next-line react-hooks/exhaustive-deps
+     
       setOpen(false)
-      // eslint-disable-next-line react-hooks/exhaustive-deps
+      
       setRefresh(!refresh)
-      // eslint-disable-next-line react-hooks/exhaustive-deps
+      
     } catch (e) {
       console.log(e)
-      // eslint-disable-next-line react-hooks/exhaustive-deps
+      
       setLoadingSubmit(false)
-      // eslint-disable-next-line react-hooks/exhaustive-deps
+      
     }
   }
 
   React.useEffect(() => {
     if (user == null) router.push('/pages/register')
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+   
   }, [user])
 
   return (

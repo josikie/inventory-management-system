@@ -1,7 +1,5 @@
 'use client'
 import { useState, Fragment } from 'react'
-import { createUserWithEmailAndPassword } from 'firebase/auth'
-import { auth } from 'src/configs/firebase.config'
 import Link from 'next/link'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
@@ -54,22 +52,18 @@ const FormControlLabel = styled(MuiFormControlLabel)(({ theme }) => ({
     color: theme.palette.text.secondary
   }
 }))
-// eslint-disable-next-line react-hooks/exhaustive-deps
+
 const RegisterPage = () => {
 
   // ** States
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const router = useRouter()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const [values, setValues] = useState({
     email: '',
     password: '',
     showPassword: false
   })
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const [errorMessage, setErrorMessage] = useState('')
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   // ** Hook
   const theme = useTheme()
 
@@ -85,46 +79,18 @@ const RegisterPage = () => {
     event.preventDefault()
   }
 
-  // register with email and password
-  // const signUp = () => {
-  //   createUserWithEmailAndPassword(auth, values.email, values.password)
-  //   .then((userCredential) => {
-  //     // Signed in
-  //     const user = userCredential.user;
-  //     console.log(user)
-  //     sessionStorage.setItem('Token',userCredential.user.accessToken)
-  //     router.push('/home')
-  //   }).catch((error) => {
-  //     const errorMessage = error.message
-  //     console.log(error)
-  //     setErrorMessage(errorMessage.split(":")[1])
-  //   })
-  // }
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const handleForm = async event => {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     event.preventDefault()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     const { result, error } = await signUp(values.email, values.password)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     if (error) {
-      // eslint-disable-next-line react-hooks/exhaustive-deps
       const errorMessage = error.message
-      // eslint-disable-next-line react-hooks/exhaustive-deps
       setErrorMessage(errorMessage.split(':')[1])
-      // eslint-disable-next-line react-hooks/exhaustive-deps
       return console.log(error)
-      // eslint-disable-next-line react-hooks/exhaustive-deps
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
 
     console.log(result)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     return router.push('/')
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   return (
     <Box className='content-center'>
       <Card sx={{ zIndex: 1 }}>

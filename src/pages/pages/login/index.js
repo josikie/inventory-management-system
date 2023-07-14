@@ -1,17 +1,13 @@
 
 'use client'
-// eslint-disable-next-line react-hooks/exhaustive-deps
 // ** React Imports
 
-// eslint-disable-next-line react-hooks/exhaustive-deps
 import { useState } from 'react'
 
-// eslint-disable-next-line react-hooks/exhaustive-deps
 // ** Next Imports
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-// eslint-disable-next-line react-hooks/exhaustive-deps
 // ** MUI Components
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
@@ -28,44 +24,34 @@ import { styled, useTheme } from '@mui/material/styles'
 import MuiCard from '@mui/material/Card'
 import InputAdornment from '@mui/material/InputAdornment'
 import MuiFormControlLabel from '@mui/material/FormControlLabel'
-// eslint-disable-next-line react-hooks/exhaustive-deps
 import { red } from '@mui/material/colors'
-// eslint-disable-next-line react-hooks/exhaustive-deps
 
 // ** Icons Imports
 import EyeOutline from 'mdi-material-ui/EyeOutline'
 import EyeOffOutline from 'mdi-material-ui/EyeOffOutline'
-// eslint-disable-next-line react-hooks/exhaustive-deps
 // ** signin firebase auth
 import signIn from 'src/auth/signin'
-// eslint-disable-next-line react-hooks/exhaustive-deps
 // ** Configs
 import themeConfig from 'src/configs/themeConfig'
-// eslint-disable-next-line react-hooks/exhaustive-deps
 // ** Layout Import
 import BlankLayout from 'src/@core/layouts/BlankLayout'
-// eslint-disable-next-line react-hooks/exhaustive-deps
 // ** Demo Imports
 import FooterIllustrationsV1 from 'src/views/pages/auth/FooterIllustration'
-// eslint-disable-next-line react-hooks/exhaustive-deps
 // ** Styled Components
 const Card = styled(MuiCard)(({ theme }) => ({
   [theme.breakpoints.up('sm')]: { width: '28rem' }
 }))
-// eslint-disable-next-line react-hooks/exhaustive-deps
 const LinkStyled = styled('a')(({ theme }) => ({
   fontSize: '0.875rem',
   textDecoration: 'none',
   color: theme.palette.primary.main
 }))
-// eslint-disable-next-line react-hooks/exhaustive-deps
 const FormControlLabel = styled(MuiFormControlLabel)(({ theme }) => ({
   '& .MuiFormControlLabel-label': {
     fontSize: '0.875rem',
     color: theme.palette.text.secondary
   }
 }))
-// eslint-disable-next-line react-hooks/exhaustive-deps
 const LoginPage = () => {
   // ** State
   const [errorMessage, setErrorMessage] = useState('')
@@ -74,51 +60,23 @@ const LoginPage = () => {
     password: '',
     showPassword: false
   })
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-
-  // login
-  // const signIn = () => {
-  //   signInWithEmailAndPassword(auth, values.email, values.password)
-  //   .then((userCredential) => {
-  //     const user = userCredential.user;
-  //     sessionStorage.setItem('Token', userCredential.user.accessToken)
-  //     router.push('/home')
-  //   })
-  //   .catch((error) => {
-  //     const errorMessage = error.message;
-  //     console.log(errorMessage);
-  //     setErrorMessage(errorMessage.split(":")[1]);
-  //   });
-  // }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+  
   const handleForm = async event => {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     event.preventDefault()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     const { result, error } = await signIn(values.email, values.password)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     if (error) {
-      // eslint-disable-next-line react-hooks/exhaustive-deps
       const errorMessage = error.message
-      // eslint-disable-next-line react-hooks/exhaustive-deps
       setErrorMessage(errorMessage.split(':')[1])
-      // eslint-disable-next-line react-hooks/exhaustive-deps
       return console.log(error)
-      // eslint-disable-next-line react-hooks/exhaustive-deps
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     //success sign in
     console.log(result)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     return router.push('/')
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }
 
   // ** Hook
   const theme = useTheme()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const router = useRouter()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
 
   const handleChange = prop => event => {
     setValues({ ...values, [prop]: event.target.value })
@@ -132,7 +90,6 @@ const LoginPage = () => {
     event.preventDefault()
   }
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   return (
     <Box className='content-center'>
       <Card sx={{ zIndex: 1 }}>
@@ -247,14 +204,6 @@ const LoginPage = () => {
                 }
               />
             </FormControl>
-            {/* <Box
-              sx={{ mb: 4, display: 'flex', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'space-between' }}
-            >
-              <FormControlLabel control={<Checkbox />} label='Remember Me' />
-              <Link passHref href='/'>
-                <LinkStyled onClick={e => e.preventDefault()}>Forgot Password?</LinkStyled>
-              </Link>
-            </Box> */}
             <Typography variant='subtitle1' sx={{ color: red[500] }}>
               {errorMessage}
             </Typography>
@@ -277,7 +226,6 @@ const LoginPage = () => {
       <FooterIllustrationsV1 />
     </Box>
   )
-  // eslint-disable-next-line react-hooks/exhaustive-deps
 }
 LoginPage.getLayout = page => <BlankLayout>{page}</BlankLayout>
 
